@@ -6,7 +6,6 @@ class Pokemon::API
   end 
   
   def get_name
-    # binding.pry
    return @json["name"]
   end 
   
