@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Rachel T'"]
   spec.email         = ["'taylor.d.rachel@gmail.com'"]
 
-  spec.summary       = %q{TODO: This gem gives you information about the Pokemon of your choice, sourced from PokeApi.}
-  # spec.description   = %q{TODO: Write a longer description or delete this line.}
-  # spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{TODO: Obtain information about a Pokemon by number, sourced from PokeApi. Gives ability information for all Pokemon in the PokeApi, Pokedex.}
+  # spec.description   = %q{TODO: }
+  # spec.homepage      = "https://github.com/rachel-taylor/pokemon"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -19,8 +19,7 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-    spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+    spec.metadata["source_code_uri"] = "https://github.com/rachel-taylor/pokemon"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."

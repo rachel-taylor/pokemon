@@ -6,7 +6,7 @@ class Pokemon::CLI
     
     def greeting 
       puts "Welcome to Unova"
-      puts "Please input a number between 1-897" 
+      puts "Please input a number between 1-807" 
       @num = gets.chomp.to_i
       @myPokemon = Pokemon::API.new(@num)
       puts @myPokemon.get_name
