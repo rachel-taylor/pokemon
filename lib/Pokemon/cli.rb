@@ -6,6 +6,10 @@ class Pokemon::CLI
     
     def greeting 
       puts "Welcome to Unova"
+      number 
+    end 
+    
+    def number
       puts "Please input a number between 1-807" 
       @num = gets.chomp.to_i
       @myPokemon = Pokemon::API.new(@num)
@@ -16,18 +20,28 @@ class Pokemon::CLI
     def pokemon 
       puts "Would you like to know it's abilities? y/n?"
       if gets.chomp == 'y'
-        evolution 
-        goodbye 
-      else 
-        goodbye 
+        evolution
+      # else 
+      #   goodbye 
       end 
       #if yes put pokemon_info 
       #if no call goodbye
+      puts "Would you like to see another? y/n"
+      if gets.chomp == 'y'
+        another
+      else 
+        goodbye
+      end 
     end 
     
     def evolution
       @myPokemon
       puts @myPokemon.get_abilities
+    end 
+    
+    def another
+      number
+      pokemon
     end 
     
     def goodbye
