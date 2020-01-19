@@ -14,7 +14,7 @@ class Pokemon::CLI
     end 
     
     def pokemon 
-      puts "Would you like to know the abilities it has? y/n?"
+      puts "Would you like to know it's abilities? y/n?"
       if gets.chomp == 'y'
         evolution 
         goodbye 
