@@ -1,18 +1,19 @@
 class Pokemon::API
   
-  def self.get_name(num)
-   poke = open("https://pokeapi.co/api/v2/pokemon/#{num}/").read
-   json = JSON.parse(poke)
-   return json["name"]
-  # binding.pry
+  def initialize(num)
+    poke = open("https://pokeapi.co/api/v2/pokemon/#{num}/").read
+    @json = JSON.parse(poke)
   end 
   
-  def self.get_abilities(num)
-    poke = open("https://pokeapi.co/api/v2/pokemon/#{num}/").read
-    json = JSON.parse(poke)
-    return json["abilities"].map do |ability|
+  def get_name
+    # binding.pry
+   return @json["name"]
+  end 
+  
+  def get_abilities
+    @json["abilities"].map do |ability|
       ability["ability"]["name"]
-      # binding.pry
     end 
   end 
+  
 end 
