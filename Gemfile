@@ -1,1 +1,6 @@
 source "https://rubygems.org"
+gem "bundler", "~> 2.0"
+gem "rake", "~> 10.0"
+gem "json"
+gem "HTTParty"
+gem "pry"
