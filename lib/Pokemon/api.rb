@@ -3,10 +3,11 @@ class Pokemon::API
   def initialize(num)
     poke = open("https://pokeapi.co/api/v2/pokemon/#{num}/").read
     @json = JSON.parse(poke)
+    @@all.push(self) 
   end 
   
   def get_name
-   return @json["name"]
+    @json["name"]
   end 
   
   def get_abilities
@@ -14,5 +15,7 @@ class Pokemon::API
       ability["ability"]["name"]
     end 
   end 
+  
+  @@all = []
   
 end 

@@ -11,8 +11,12 @@ class Pokemon::CLI
     
     def number
       puts "Please input a number between 1-807" 
-      @num = gets.chomp.to_i
-      @myPokemon = Pokemon::API.new(@num)
+      num = gets.chomp.to_i
+      if num > 807 || num < 1 
+        puts "Invalid Input"
+        number 
+      end   
+      @myPokemon = Pokemon::API.new(num)
       puts @myPokemon.get_name
       pokemon 
     end 
